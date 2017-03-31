@@ -3,8 +3,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD3CB3E2-1EEF-44B5-9A3E-C57A61486780}</ProjectGuid>
-    <ProjectTypeGuids>{86F6BF2A-E449-4B3E-813B-9ACC37E5545F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid></ProjectGuid>
+    <ProjectTypeGuids></ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>XSTerm</RootNamespace>
     <AssemblyName>XSTerm</AssemblyName>

@@ -13,7 +13,23 @@
         <script src="https://use.edgefonts.net/source-code-pro.js"></script>
     </head>
     <body>
+		<label id="label1">label1</label>
+		<label id="label2">label2</label>
+		<label id="label3">label3</label>
+        <input type="text" id="search" placeholder="Search...">  
+        <input type="checkbox" id="regex" >
+        <label> Regex </label>
+        <input type="checkbox" id="case"> 
+        <label> Case-Insensitive </label>
+        <button onclick="myFunction()" style="color:blue;text-align:center;">Click me</button>
         <div id="terminal-container"></div>
+		<script>
+			function myFunction() {
+				document.getElementById("label1").innerHTML = document.getElementById("search").value;
+        		document.getElementById("label2").innerHTML = document.getElementById("regex").checked;
+        		document.getElementById("label3").innerHTML = document.getElementById("case").checked;
+			}
+		</script>
         <script src="main.js" defer ></script>
     </body>
 </html>
