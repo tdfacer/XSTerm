@@ -88,6 +88,8 @@ function runSomething (text) {
 	//command += text + "\r";
 
 	//var command = "adb logcat | grep " + text + "\r";
+	term.send("\3\r");
+	term.send("\3");
 	term.send("clear\r");
 	term.send(command);
 	//term.send ("ls\r");
