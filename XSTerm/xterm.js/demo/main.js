@@ -13,6 +13,7 @@ var terminalContainer = document.getElementById('terminal-container'),
     colsElement = document.getElementById('cols'),
     rowsElement = document.getElementById('rows');
 
+
 function setTerminalSize () {
   var cols = parseInt(colsElement.value),
       rows = parseInt(rowsElement.value),
@@ -73,4 +74,15 @@ function createTerminal() {
 function runTerminal() {
   term.attach(socket);
   term._initialized = true;
+}
+
+function runSomething (something) {
+	term.send(something);
+}
+
+function myFunction() {
+	runSomething(document.getElementById("search").value);
+	document.getElementById("label1").innerHTML = document.getElementById("search").value;
+	document.getElementById("label2").innerHTML = document.getElementById("regex").checked;
+	document.getElementById("label3").innerHTML = document.getElementById("case").checked;
 }

@@ -2386,6 +2386,7 @@ Terminal.prototype.write = function(data) {
   this.refresh(this.refreshStart, this.refreshEnd);
 };
 
+//### Might be this guy here
 /**
  * Writes text to the terminal, followed by a break line character (\n).
  * @param {string} text The text to write to the terminal.
@@ -2785,6 +2786,7 @@ Terminal.prototype.keyPress = function(ev) {
   return false;
 };
 
+//### Also looks promising
 /**
  * Send data for handling to the terminal
  * @param {string} data
