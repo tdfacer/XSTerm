@@ -18,6 +18,32 @@
         <label> Regex </label>
         <input type="checkbox" id="case"> 
         <label> Case-Insensitive </label>
+        <div class="selectContainer selectTest" style="width: 305px;">
+		<select name="test" size="1" id="logtags" onclick="addToSearch()" >
+		    <option value="api">Api</option>
+		    <option value="band">Band</option>
+		    <option value="benchmark">Benchmark</option>
+		    <option value="calendar">Calendar</option>
+		    <option value="charts">Charts</option>
+		    <option value="combined">Combined</option>
+		    <option value="connectoin">Connectoin</option>
+		    <option value="deviceadmin">DeviceAdmin</option>
+		    <option value="drawmap">DrawMap</option>
+		    <option value="error">Error</option>
+		    <option value="fatal">Fatal</option>
+		    <option value="firmware">Firmware</option>
+		    <option value="fitpro">FitPro</option>
+		    <option value="heartRate">HeartRate</option>
+		    <option value="map">Map</option>
+		    <option value="mvxtrace">MvxTrace</option>
+		    <option value="navigation">Navigation</option>
+		    <option value="settings">Settings</option>
+		    <option value="sync">Sync</option>
+		    <option value="usb">Usb</option>
+		    <option value="video">Video</option>
+		    <option value="wifi">Wifi</option>
+		    <option value="workout">Workout</option>
+		</select>
         <button onclick="myFunction()" style="color:blue;text-align:center;">Filter</button>
         <div id="terminal-container"></div>
         <script src="main.js" defer ></script>
