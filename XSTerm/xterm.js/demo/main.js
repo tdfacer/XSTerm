@@ -115,8 +115,9 @@ var selectedTag = tags.options[tags.selectedIndex].value;
 	document.getElementById("regex").checked = true;
 	//if (document.getElementById("search").value ==  null){
 	if (document.getElementById("search").value.length == 0){
-		document.getElementById("search").value = selectedTag;
+		document.getElementById("search").value = "\\(" + selectedTag + "\\)";
 	} else {
-		document.getElementById("search").value += "|"+selectedTag;
+		document.getElementById("search").value += "|\\(" + selectedTag + "\\)";
 	}
+	document.getElementById("search").placeholder = "";
 }
