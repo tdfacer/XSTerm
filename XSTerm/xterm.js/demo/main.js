@@ -76,13 +76,32 @@ function runTerminal() {
   term._initialized = true;
 }
 
-function runSomething (something) {
-	term.send(something);
+//function runSomething (text, reg, case) {
+function runSomething (text) {
+	var command = "adb logcat | grep " + text + "\r";
+	//if (reg) {
+	//	command += "-E ";
+	//} else if (case) {
+	//	command += "-i ";
+	//}
+
+	//command += text + "\r";
+
+	//var command = "adb logcat | grep " + text + "\r";
+	term.send("clear\r");
+	term.send(command);
+	//term.send ("ls\r");
+	//term.send(something);
 }
 
 function myFunction() {
 	runSomething(document.getElementById("search").value);
-	document.getElementById("label1").innerHTML = document.getElementById("search").value;
+	//document.getElementById("label1").innerHTML = document.getElementById("search").value;
 	document.getElementById("label2").innerHTML = document.getElementById("regex").checked;
 	document.getElementById("label3").innerHTML = document.getElementById("case").checked;
+
+	//var text = document.getElementById("search").value;
+	//var regex = document.getElementById("regex").checked;
+	//var case = document.getElementById("case").checked;
+	//runSomething(text, regex, case);
 }
