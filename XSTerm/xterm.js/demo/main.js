@@ -79,10 +79,16 @@ function runTerminal() {
 function clearTerminal() {
 	term.send("\3");
 	term.send("clear\r");
+
+	document.getElementById("search").value = "";
+	document.getElementById("search").placeholder = "search...";
 }
 
-function runSomething (text, caseInsensitive, reg) {
+function runSomething (text, caseInsensitive, reg, timestamp) {
 	var command = "adb logcat";
+	if (timestamp) {
+		command += " -v time"
+	}
 if (text.length > 0){
 	command += " | grep --color=auto ";
 	if (caseInsensitive){
@@ -103,8 +109,9 @@ function myFunction() {
 	var w = document.getElementById("search").value;
 	var x = document.getElementById("case").checked;
 	var y = document.getElementById("regex").checked;
+	var z = document.getElementById("timestamp").checked;
 
-	runSomething(w, x, y);
+	runSomething(w, x, y, z);
 
 }
 
