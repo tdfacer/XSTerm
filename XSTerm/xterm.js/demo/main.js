@@ -76,6 +76,11 @@ function runTerminal() {
   term._initialized = true;
 }
 
+function clearTerminal() {
+	term.send("\3");
+	term.send("clear\r");
+}
+
 function runSomething (text, caseInsensitive, reg) {
 	var command = "adb logcat";
 if (text.length > 0){
