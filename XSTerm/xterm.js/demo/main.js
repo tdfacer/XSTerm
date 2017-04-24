@@ -133,3 +133,9 @@ var selectedTag = tags.options[tags.selectedIndex].value;
 	}
 	document.getElementById("search").placeholder = "";
 }
+
+function uninstallWolf () {
+	var command = "adb uninstall com.ifit.standalone";
+	command += "\r";
+	term.send(command);
+}
