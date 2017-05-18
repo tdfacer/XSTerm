@@ -12,7 +12,7 @@ using WebKit;
 
 namespace XSTerm
 {
-	public class XSTerm : MonoDevelop.Ide.Gui.PadContent
+    public class XSTerm : MonoDevelop.Ide.Gui.PadContent
 	{
 		readonly Terminal terminal;
 		public XSTerm()
